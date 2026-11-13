@@ -34,7 +34,7 @@ Chaque fois qu'on décide quelque chose de nouveau, on l'ajoute ici (« ajoute �
 
 - Pas d'emojis, pas de look « modèle tout fait ».
 - Pas de fondu enchaîné à chaque transition : chaque scène naît de la précédente.
-- Pas de texte collé aux bords : garder une marge, en vertical surtout en haut et en bas (zones cachées par les boutons des réseaux).
+- Pas de texte collé aux bords : garder une marge. En vertical, rien d'important tout en bas ni sur le côté droit (les boutons et la légende de TikTok, Reels et Shorts les cachent) : le texte important reste vers le centre.
 - Pas de texte trop petit : il doit se lire sur un téléphone, sans le son.
 - Jamais de son, de musique ou de voix inventés ou fabriqués par du code : seulement les fichiers fournis dans `public/`.
 - Jamais d'information inventée (prix, chiffres, noms) : demander si elle manque.
@@ -54,6 +54,12 @@ Chaque fois qu'on décide quelque chose de nouveau, on l'ajoute ici (« ajoute �
 - `src/` : le code des vidéos (c'est Claude qui l'écrit).
 - `mes-videos/` : les vidéos finies (MP4). Toujours y ranger les rendus, avec un nom clair (`pub-boutique-v2.mp4`).
 - `outils/` : `transcrire.py` (transcrire une voix ou un rush, mot par mot) et `comparer.py` (vérifier que la voix dit bien le script).
+- Quand la personne parle du « dossier voix », « images », « sons », « clips » ou « rushs », il s'agit de `public/voix/`, `public/images/`, `public/sons/`, `public/clips/` et `public/rushs/` : Remotion ne lit que ce qui est dans `public/`. Les créer s'ils n'existent pas. Si elle a déposé un fichier ailleurs dans le projet, le déplacer au bon endroit et le lui dire.
+
+## Les modèles réutilisables
+
+- Quand on transforme une vidéo en modèle (« je veux pouvoir changer seulement le prix, la couleur… »), décrire les réglages avec un schéma zod (`npx remotion add zod @remotion/zod-types`, `zColor()` pour les couleurs) et des `defaultProps` écrits directement dans la `<Composition>` : ils apparaissent alors dans le panneau de droite de Remotion Studio, et Studio enregistre tout seul les changements.
+- Ranger les morceaux réutilisables (style de sous-titres, bandeau, appel à l'action, mouvements) dans `src/mes-modeles/`, et expliquer où modifier chaque élément.
 
 ## La voix off
 
