@@ -1,0 +1,10 @@
+node_modules
+dist
+out
+.DS_Store
+.env
+
+# Les rushs (vidéos filmées) sont trop lourds pour GitHub : ils restent sur l'ordinateur,
+# ou Claude les retélécharge depuis Google Drive dans une session sur téléphone.
+public/rushs/*
+!public/rushs/.gitkeep

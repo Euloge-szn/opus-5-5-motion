@@ -1,0 +1,8 @@
+# Fins de ligne Unix pour tous les fichiers texte (le script d'installation tourne sous Linux dans le cloud).
+* text=auto eol=lf
+*.sh text eol=lf
+*.mp4 binary
+*.wav binary
+*.mp3 binary
+*.png binary
+*.jpg binary
